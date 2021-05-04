@@ -21,7 +21,8 @@ main.d main.o: .././main.c ../atmel_start.h ../include/driver_init.h \
  ../Config/clock_config.h ../include/port.h ../include/atmel_start_pins.h \
  ../include/clkctrl.h ../include/usart_basic.h ../include/cpuint.h \
  ../include/slpctrl.h ../include/bod.h ../include/atmel_start_pins.h \
- ../include/TLC5916.h ../include/TLC5916_Util.h \
+ ../include/TLC5916.h ../include/atmel_start_pins.h \
+ ../include/TLC5916_Util.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
@@ -87,6 +88,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../include/atmel_start_pins.h:
 
 ../include/TLC5916.h:
+
+../include/atmel_start_pins.h:
 
 ../include/TLC5916_Util.h:
 
