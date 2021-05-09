@@ -8,38 +8,51 @@ uint8_t outputPin;
 
 uint16_t counter;
 
-uint8_t count;
+uint8_t count, brightness;
 
 void printToTerminal(uint8_t r);
 void nightRider();
-void magiger();
+void majiger(uint8_t b);
 
 int main(void)
 {
+	brightness = 1;
 	atmel_start_init();
-	
-	switchToNormalMode();
-	counter = 0;
-	count = 0;
-	
-	enableOutput();
-	allOn();
 	_delay_us(100000);
-	while (1) {		
-		magiger();
+	//majiger();
+	enableOutput();
+	
+// 	
+// 	//switchToNormalMode();
+// 	counter = 0;
+// 	count = 32;
+// 	
+// 	enableOutput();
+// 	allOn();
+// 	_delay_us(100000);
+	while (1) {	
 		
+		if(brightness == 255) {
+			brightness = 0;
+			} else {
+			brightness = 255;
+		}
+			
+		majiger(brightness);
+		
+		transmitCharacter(1, 8);
+		_delay_us(5000000);
 	}
 }
-void magiger() {
+void majiger(uint8_t b) {
 	switchToSpecialMode();
 	
-	writeConfiguration((count << 2) + 3);
+	writeConfiguration(b);// + 192);
 		
 	
-	_delay_us(100000);
+	_delay_us(10);
 	switchToNormalMode();
-	allOn();
-	_delay_us(100000);
+	
 }
 void printToTerminal(uint8_t r) {
 	uint8_t divisor = 0;
