@@ -22,6 +22,7 @@
 
 #define WCC_OE			255
 #define WCC_LE			128
+#define WCC_FULL_BRIGHT	255
 
 #define DATA_NULL		0
 

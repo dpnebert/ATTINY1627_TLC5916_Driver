@@ -42,11 +42,8 @@ void writeConfiguration(uint8_t c) {
 
 
 
-uint8_t readErrorCodeStatus() {
-	
-	
-	uint8_t reading = 0;
-	
+uint8_t readErrorCodeStatus() {	
+	uint8_t reading = 0;	
 	generateErrorCodeStatus();
 	CLK_set_level(true);
 	disableOutput();
@@ -66,3 +63,4 @@ uint8_t readErrorCodeStatus() {
 	}
 	return reading;
 }
+
