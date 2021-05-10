@@ -1,1 +1,1 @@
-# ATTINY1627_TLC5916_Driver
+# TLC5916-Lite-Driver-Library
