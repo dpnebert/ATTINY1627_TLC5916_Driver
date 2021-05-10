@@ -66,3 +66,4 @@ uint8_t readErrorCodeStatus() {
 	}
 	return reading;
 }
+
